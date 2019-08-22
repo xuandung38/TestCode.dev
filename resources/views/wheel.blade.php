@@ -42,17 +42,7 @@
             'numSegments' : 8,
             'outerRadius' : 250,
             'canvasId'    : 'secondCanvas',
-            'segments'    :
-            [
-               {'fillStyle' : '#eae56f', 'text' : 'Prize 1'},
-               {'fillStyle' : '#89f26e', 'text' : 'Prize 2'},
-               {'fillStyle' : '#7de6ef', 'text' : 'Prize 3'},
-               {'fillStyle' : '#e7706f', 'text' : 'Prize 4'},
-               {'fillStyle' : '#eae56f', 'text' : 'Prize 5'},
-               {'fillStyle' : '#89f26e', 'text' : 'Prize 6'},
-               {'fillStyle' : '#7de6ef', 'text' : 'Prize 7'},
-               {'fillStyle' : '#e7706f', 'text' : 'Prize 8'}
-            ],
+            
             'animation' :
             {
                 'type'          : 'spinToStop',
@@ -112,13 +102,13 @@
             // The request has completed.
             if (xhr.readyState === 4) {
                 let segmentNumber = xhr.responseText;   // The segment number should be in response.
-
+                console.log(segmentNumber);
                 if (segmentNumber) {
                     let stopAt = secondWheel.getRandomForSegment(segmentNumber);
-
+                    
                     // Important thing is to set the stopAngle of the animation before stating the spin.
                     secondWheel.animation.stopAngle = stopAt;
-
+                    console.log(stopAt);
                     // Start the spin animation here.
                     secondWheel.startAnimation();
                 }
