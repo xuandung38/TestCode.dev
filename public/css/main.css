@@ -1,81 +1,319 @@
-/*
-Description:
-    Contains all the styles for the winning wheel page.
-    
-Verison History:
-    2012-01-28, Douglas McKechie
-    - Created based off earlier version.
-    
-    2015-09-26, Douglas McKechie
-    - Minor updates for the 2.0 winwheel example.
-*/
-
-body
-{
-    font-family: arial;
-}
-
-/* Sets the background image for the wheel */
-td.the_wheel
-{
-    background-image: url(./wheel_back.png);
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:700");
+html,
+body {
+    background-image: url('../imgs/Nen-PC.png');
     background-position: center;
-    background-repeat: none;
-}
-
-/* Do some css reset on selected elements */
-h1, p
-{
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    margin:0px;
+    padding:0px;
+    height: 100vh;
     margin: 0;
+    color: #000000;
 }
 
-div.power_controls
-{
-    margin-right:70px;
+.wrapper {
+    height:auto;
 }
 
-div.html5_logo
-{
-    margin-left:70px;
+.gift {
+    background: url('../imgs/images/bg-gift.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+}
+.wrapper-gift  {
+  padding-top: 50px;
+}
+.wrapper-gift .title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-/* Styles for the power selection controls */
-table.power
-{
-    background-color: #cccccc;
+.wrapper-gift .tips {
+    color: #fff;
+    font-style: italic;
+    text-align: center;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 44px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.threed {
+    font-family: "Dancing Script";
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    text-shadow: -3px 0 rgba(0, 255, 255, 0.4), 3px 0 rgba(255, 0, 255, 0.4);
+    padding-bottom: 50px;
+    padding-top: 50px
+}
+
+.the_wheel {
+    margin: auto;
+    width: 100%;
+}
+
+#canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+div.power_controls {
+    background-image: url(../imgs/Khung-VongQuay.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    height: 130%;
     cursor: pointer;
-    border:1px solid #333333;
 }
 
-table.power th
-{
-    background-color: white;
-    cursor: default;
+div.power_controls a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-td.pw1
-{
-    background-color: #6fe8f0;
+div.power_controls a:hover {
+    text-decoration: none;
 }
 
-td.pw2
-{
-    background-color: #86ef6f;
+#rewardModal .model-content .model-body .reward-list ul {
+    list-style: none;
 }
 
-td.pw3
-{
-    background-color: #ef6f6f;
+#loginModal .modal-header {
+    background-image: url('../imgs/images/bg_all_tieude_popup.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: none;
+    display: block;
+    z-index: 100;
 }
 
-/* Style applied to the spin button once a power has been selected */
-.clickable
-{
+#loginModal .modal-header .modal-title {
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#loginModal .modal-content {
+    background: none;
+    border: none;
+}
+
+#loginModal .modal-content .modal-body {
+    margin-top: -35px;
+    height: 300px;
+    background-image: url('../imgs/images/bg_popup1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#loginModal .modal-content .modal-body .bt_dangnhap {
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 19px;
+    max-width: 170px;
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    display: block;
+    background-image: -moz-linear-gradient( 90deg, rgb(116, 172, 254) 0%, rgb(90, 137, 233) 23%, rgb(83, 126, 220) 44%, rgb(91, 138, 234) 71%, rgb(104, 156, 245) 83%, rgb(117, 173, 255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(116, 172, 254) 0%, rgb(90, 137, 233) 23%, rgb(83, 126, 220) 44%, rgb(91, 138, 234) 71%, rgb(104, 156, 245) 83%, rgb(117, 173, 255) 100%);
+}
+
+
+/* CSS MODAL AWORD */
+
+#modelSuccess .modal-header {
+    background-image: url('../imgs/images/bg_all_tieude_popup.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: none;
+    display: block;
+    z-index: 100;
+}
+
+#modelSuccess .modal-header .modal-title {
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#modelSuccess .modal-content {
+    background: none;
+    border: none;
+}
+
+#modelSuccess .modal-content .modal-body {
+    margin-top: -35px;
+    height: 300px;
+    background-image: url('../imgs/images/bg_popup1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#happyModal {
+    background-image: url(../imgs/images/happy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#guideModal .modal-body strong {
+    font-weight: bold;
+}
+
+.menufixed {
+    position: fixed;
+    left: 0;
+    bottom: 250px;
+}
+
+.menufixed button {
+    background-image: url(../imgs/images/sprite.png);
+    background-position: 0px -315px;
+    width: 206px;
+    height: 57px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    color: #fff;
+    font-weight: bold;
 }
 
-/* Other misc styles */
-.margin_bottom
-{
-    margin-bottom: 5px;
+.menufixed button:hover {
+    margin-left: -5px;
+}
+
+.menufixed button:active {
+    border: none;
+}
+
+@media only screen and (min-width:200px) and (max-width:480px) {
+    .menufixed {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+    .menufixed button {
+        float: left;
+        width: 30%;
+        height: 50px;
+        margin-right: 5px;
+        background-image: url(../imgs/images/sprite-mobile.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.wrapper-gift .gift-item {
+    padding-top: 30px;
+    background: #fff;
+    margin-bottom: 10px;
+    background-image: linear-gradient(180deg, #ffd15a, #f58605 77%, #ff5e00);
+    border-radius: 10px;
+    border: 5px solid #07358a;
+    text-align: center;
+    visibility: middle;
+    color: #fff;
+}
+
+.wrapper-gift .gift-item h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#alert-share {
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+    height: 100px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(215, 44, 44, 0.9);
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    padding-top: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    color: #fff;
+    display: none;
+    box-sizing: border-box;
+}
+
+.arrow-down {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #f00;
 }

@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('wheel');
-});
+// Route::get('/', function () {
+//     return view('wheel');
+// });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
